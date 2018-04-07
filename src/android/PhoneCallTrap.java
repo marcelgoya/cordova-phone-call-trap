@@ -9,7 +9,7 @@ import android.telephony.TelephonyManager;
 
 import org.json.JSONException;
 import org.json.JSONArray;
-
+import org.json.JSONObject;
 
 public class PhoneCallTrap extends CordovaPlugin {
 
