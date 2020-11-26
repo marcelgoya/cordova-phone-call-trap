@@ -44,8 +44,11 @@
             NSLog(@"call NO - IDLE");
             callState = @"IDLE";
         }
+
+        NSDictionary *dictionary = @{@"state" : callState,
+                             @"number" : @""};
         
-        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:callState];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dictionary];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     };
 }
